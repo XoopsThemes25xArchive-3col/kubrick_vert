@@ -1,0 +1,70 @@
+<table width="100%" cellspacing="1" cellpadding="4" border="0">
+  <tr>
+    <td>
+        <ul class="item">
+            <li><{$lang_submitonce}></li>
+            <li><{$lang_allpending}></li>
+            <li><{$lang_dontabuse}></li>
+            <li><{$lang_wetakeshot}></li>
+        </ul><br />
+    <form action="<{$xoops_url}>/modules/mydownloads/submit.php" method="post">
+        <table class ="outer" cellspacing="1" width="80%">
+          <tr>
+            <th colspan="2"><{$lang_submitcath}></th>
+          </tr>
+          <tr>
+            <td class="head"><{$lang_sitetitle}></td>
+            <td class="even"><input type="text" name="title" size="50" maxlength="100" /></td>
+          </tr>
+          <tr>
+            <td class="head"><{$lang_siteurl}></td>
+            <td class="even"><input type="text" name="url" size="50" maxlength="250" value="http://" /></td>
+          </tr>
+          <tr>
+            <td class="head"><{$lang_category}></td>
+            <td class="even"><{$category_selbox}></td>
+          </tr>
+          <tr>
+            <td class="head"><{$lang_homepage}></td>
+            <td class="even"><input type="text" name="homepage" size="50" maxlength="100" value="<{$file.homepage}>" />
+            </td>
+          </tr>
+          <tr>
+            <td class="head"><{$lang_version}></td>
+            <td class="even"><input type="text" name="version" size="10" maxlength="20" value="<{$file.version}>" /></td>
+          </tr>
+          <tr>
+            <td class="head"><{$lang_size}></td>
+            <td class="even"><input type="text" name="size" size="10" maxlength="20" value="<{$file.size}>" /><{$lang_bytes}></td>
+          </tr>
+          <tr>
+            <td class="head"><{$lang_platform}></td>
+            <td class="even"><input type="text" name="platform" size="50" maxlength="50" value="<{$file.plataform}>" /></td>
+          </tr>
+          <tr>
+            <td class="head"><{$lang_description}></td>
+            <td class="even"><{$xoops_codes}><{$xoops_smilies}></td>
+          </tr>
+          <tr>
+            <td class="head"><{$lang_options}></td>
+            <td class="even">
+            <{if $notify_show}>
+              <input type="checkbox" name="notify" value="1" /><{$lang_notify}>
+            <{/if}>
+            </td>
+          </tr>
+
+   <!-- Hack SecurityImage by Kraven30-->
+          <tr>
+            <td class="head"><{$lang_securityimage}></td>
+            <td class="even"><{$input_securityimage}></td>
+          </tr>
+	 <!-- Hack SecurityImage by Kraven30-->
+          
+        </table>
+      <br />
+      <div style="text-align: center;"><input type="submit" name="submit" class="button" value="<{$lang_submit}>" />&nbsp;<input type="button" value="<{$lang_cancel}>" onclick="javascript:history.go(-1)" /></div>
+    </form>
+  </td>
+</tr>
+</table>

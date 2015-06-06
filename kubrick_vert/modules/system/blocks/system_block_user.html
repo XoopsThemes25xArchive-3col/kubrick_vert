@@ -1,0 +1,29 @@
+
+		
+<!-- menu en mode enregistré -->
+<div class="uname"><{$smarty.const.THEME_WELLCOME}>&nbsp;<{$xoops_uname}></div>
+
+
+<ul>
+	<!-- pour ma messagerie -->
+	<{xoInboxCount assign=pmcount}>
+        <{if $pmcount}>
+			<!-- si j'ai des messages -->
+			<li><a href="<{xoAppUrl /viewpmsg.php}>" title="<{$block.lang_inbox}>">(<{$pmcount}>) <{$smarty.const.THEME_NOTREAD}></a></li>
+		<{else}>
+			<!-- si je n'ai pas de message -->
+			<li><a href="<{xoAppUrl /viewpmsg.php}>" title="<{$block.lang_inbox}>"><{$smarty.const.THEME_MESSAGE}></a></li>
+		<{/if}>
+	<!-- fin de ma messagerie -->
+
+	<li><a href="<{xoAppUrl /notifications.php}>" title="<{$smarty.const.THEME_NOTIFICATION}>"><{$smarty.const.THEME_NOTIFICATION}></a></li>
+	<li><a href="<{xoAppUrl /user.php}>" title="<{$smarty.const.THEME_MYACCOUNT}>"><{$smarty.const.THEME_MYACCOUNT}></a></li>
+
+	<!-- lien supplémentaire si j'ai des droits d'administration de module -->
+	<{if $xoops_isadmin}>
+		<li><a href="<{xoAppUrl /admin.php}>" title="<{$smarty.const._CPHOME}>"><{$smarty.const._CPHOME}></a></li>
+	<{/if}>
+	<!-- fin du lien supplémentaire -->
+    
+<li><a href="<{xoAppUrl /user.php?op=logout}>" title="<{$smarty.const._LOGOUT}>"><{$smarty.const._LOGOUT}></a></li>
+</ul>

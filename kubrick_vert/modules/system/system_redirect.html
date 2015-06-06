@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+	<{assign var=theme_name value=$xoTheme->folderName|cat:'/xotpl'}>
+	
+	<!-- Metas -->
+	<{includeq file="$theme_name/xometas.html"}>
+
+	<{$xoops_module_header}>
+
+</head>
+<body>
+<div id="xo-wrapper" align="center">
+	<div id="xo-redirect">
+		
+<table>
+	<tr>
+    	<td id="header-l"></td>
+        <td id="header-c">
+			<table>
+                 <tr>
+                    <td class="message"><{$message}></td>
+                 </tr>
+                 <tr>
+                   	<td class="center"><img src="<{xoImgUrl img/ajax_indicator_01.gif}>" alt="<{$message}>"/></td>
+                 </tr>
+             </table>
+        </td>
+        <td id="header-r"></td>
+    </tr>
+</table>
+        
+        <div id="footer-l">
+    	<div id="footer-r">
+		<div class="notreload">
+			<{$lang_ifnotreload}>
+		</div>
+        
+        </div>
+        </div>
+
+	<{if $xoops_logdump != ''}><div><{$xoops_logdump}></div><{/if}>
+	</div>
+</div>
+
+</body>
+</html>

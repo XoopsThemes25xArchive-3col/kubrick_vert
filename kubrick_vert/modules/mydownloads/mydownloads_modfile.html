@@ -1,0 +1,49 @@
+<form action="modfile.php" method="post">
+<table width="80%" cellspacing="1" class="outer">
+  <tr>
+    <th colspan="2">
+      <{$lang_requestmod}>
+    </th>
+  </tr>
+  <tr>
+    <td class="head"><{$lang_fileid}></td>
+    <td class="even"><{$file.id}></td>
+  </tr>
+  <tr>
+    <td class="head"><{$lang_sitetitle}></td>
+    <td class="even"><input type="text" name="title" size="50" maxlength="100" value="<{$file.title}>" /></td>
+  </tr>
+  <tr>
+    <td class="head"><{$lang_siteurl}></td>
+    <td class="even"><input type="text" name="url" size="50" maxlength="100" value="<{$file.url}>" /></td>
+  </tr>
+  <tr>
+    <td class="head"><{$lang_category}></td>
+    <td class="even"><{$category_selbox}></td>
+  </tr>
+  <tr>
+    <td class="head"><{$lang_homepage}></td>
+    <td class="even"><input type="text" name="homepage" size="50" maxlength="100" value="<{$file.homepage}>" /></td>
+  </tr>
+  <tr>
+    <td class="head"><{$lang_version}></td>
+    <td class="even"><input type="text" name="version" size="10" maxlength="20" value="<{$file.version}>" /></td>
+  </tr>
+  <tr>
+    <td class="head"><{$lang_size}></td>
+    <td class="even"><input type="text" name="size" size="10" maxlength="20" value="<{$file.size}>" /> <{$lang_bytes}></td>
+  </tr>
+  <tr>
+    <td class="head"><{$lang_platform}></td>
+    <td class="even"><input type="text" name="platform" size="50" maxlength="50" value="<{$file.plataform}>" /></td>
+  </tr>
+  <tr>
+    <td class="head" valign="top"><{$lang_description}></td>
+    <td class="even"><textarea name="description" cols="60" rows="5"><{$file.description}></textarea></td>
+  </tr>
+  <tr>
+    <td class="head" >&nbsp;</td>
+    <td align="center" class="even"><input type="hidden" name="logourl" value="<{$file.logourl}>" /><input type="hidden" name="lid" value="<{$file.id}>" /><input type="submit" name="submit" value="<{$lang_sendrequest}>" />&nbsp;<input type="button" value="<{$lang_cancel}>" onclick="javascript:history.go(-1)" /></td>
+  </tr>
+</table>
+</form>

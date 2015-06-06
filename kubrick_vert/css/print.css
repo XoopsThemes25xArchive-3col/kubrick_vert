@@ -1,0 +1,196 @@
+html,body {
+font-size:9pt;
+font-family:"Lucida Grande", Verdana, sans-serif;
+background-color:#fff;
+color:#333;
+width:95%;
+margin:0;
+padding:0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+text-decoration:none;
+page-break-after:avoid!important;
+}
+
+h1 {
+font-size:1.2em;
+font-weight:700;
+}
+
+h2 {
+font-size:1.1em;
+}
+
+h3,h4,h5,h6 {
+font-size:1em;
+}
+
+abbr[title]:after,acronym[title]:after {
+content:" (" attr(title) ")";
+font-style:italic;
+}
+
+blockquote,q {
+font-style:italic;
+quotes:"\00AB\00A0" "\00A0\00BB" "\0022" "\0022";
+}
+
+pre,code,table {
+page-break-inside:avoid!important;
+}
+
+pre {
+border:1px dotted;
+padding:12pt;
+}
+
+table th {
+font-size:1.1em;
+font-weight:700;
+padding-bottom:1em;
+}
+
+#xo-page {
+background-color:inherit;
+color:#333;
+font-size:1em;
+line-height:1.2em;
+}
+
+#xo-site-title {
+padding-left:10px;
+font-size:1.1em;
+font-weight:700;
+text-align:right;
+color:#54D143;
+background-color:inherit;
+}
+
+a#xo-site-title {
+text-decoration:none;
+}
+
+#xo-site-slogan {
+padding-left:40px;
+font-size:1.1em;
+font-style:italic;
+color:#333;
+background-color:inherit;
+}
+
+#xo-footer {
+margin-top:50px;
+color:#333;
+text-align:center;
+font-size:.7em;
+}
+
+#xo-footer a {
+background-color:inherit;
+color:#44AA37;
+text-decoration:none;
+}
+
+.xo-blocktitle {
+background-color:inherit;
+color:#54D143;
+font-size:1.1em;
+padding:.5em 0;
+}
+
+.xo-blockcontent {
+font-size:.9em;
+text-align:justify;
+}
+
+.xo-blockcontent a {
+background-color:inherit;
+color:#44AA37;
+font-style:italic;
+text-decoration:none;
+}
+
+.xo-blockcontent a:after,.xo-blockcontent a[href]:after {
+background-color:inherit;
+color:#44AA37!important;
+content:" [\00A0" attr(href) "\00A0]";
+font-size:.8em;
+text-decoration:none;
+}
+
+.item {
+color:#333;
+background-color:inherit;
+padding:5px;
+}
+
+#xo-canvas-content ul {
+font-size:.9em;
+text-align:left;
+list-style:square inside;
+margin:2px;
+padding:2px;
+}
+
+input[type=text] {
+border-color:#333;
+border-style:dotted;
+border-width:0 0 1px!important;
+}
+
+input[type=checkbox] {
+border:none;
+margin:0;
+}
+
+select {
+font-size:.8em;
+border-color:#333;
+border-style:dotted;
+border-width:0 0 1px!important;
+}
+
+textarea {
+border:1px dotted #333!important;
+height:auto;
+overflow:hidden;
+font-size:.9em;
+font-style:italic;
+}
+
+.comTitle {
+font-size:.8em;
+background-color:inherit;
+color:#54D143;
+}
+
+.comText {
+padding:2px;
+}
+
+.comDate {
+font-style:italic;
+font-size:.7em;
+}
+
+.signature {
+font-size:.7em;
+font-style:italic;
+}
+
+#xo-noprint,#xo-canvas-leftcolumn,#xo-canvas-rightcolumn,#xo-language,#xo-userbar,xo-searchbar,#xo-top,body.theme-dialog #xo-banner,#xo-banner-ad,#xo-globalnav,#xo-uptop,#xo-breadcrumb,#xo-footer .validw3c,#xo-footer span.design,#xo-footer .rss,#xo-logger-output,#system-select_notifications,.itemFoot,#xo-smiley,#user_sigSmiley,#user_sigStyletext,select#user_sigFont,select#user_sigColor,select#user_sigFont,select#user_sigSize,span#xoopsHiddenText,hr,form [name=notification_select],input[type=submit],input[type=reset],input[type=button],td.foot,form#quick_reply,form[name=forum_jumpbox],select#topicoption,select#viewmode,.comUserStatus,.itemPermaLink,.itemFoot,.itemAdminLink,#xo-header-admin,.admin_layer {
+display:none;
+}
+
+img,abbr,acronym {
+border:0;
+}
+
+form,input,select,.comUserRank {
+font-size:.9em;
+}
+
+.comUserStat,.comUserStatCaption,.comUserRankText,.comDateCaption {
+font-size:.7em;
+}

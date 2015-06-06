@@ -1,0 +1,34 @@
+<br />
+<table width="95%" id="fullSupport">
+
+  <tr>
+    <td class="foot" colspan='2'><{$lang_category}> <{$link.category}></td>
+  </tr>
+
+  <tr height="25">
+    <td align='center' width='20%' class="head"><{$lang_lastupdate}><br /><{$link.updated}></td>
+    <td width='80%' class="head" align="center"><h1><a href='visit.php?cid=<{$link.cid}>&amp;lid=<{$link.id}>' target='_blank'><img src='<{$xoops_url}>/modules/mylinks/images/link.png' border='0' alt='<{$lang_visit}>' />&nbsp;&nbsp;<{$link.title}></a>&nbsp;<{$link.adminlink}></h1></td>
+  </tr>
+    
+  <tr>
+    <td align="center"><br /><{if $link.logourl != ""}><a href="<{$xoops_url}>/modules/mylinks/visit.php?cid=<{$link.cid}>&amp;lid=<{$link.id}>" target="_blank"><img src="<{$xoops_url}>/modules/mylinks/images/shots/<{$link.logourl}>" width="<{$shotwidth}>" alt="" /></a><{/if}></td>
+    <td class="item"><br /><{$link.description}></td>
+  </tr>
+  
+  <tr>
+    <td align='center'>
+      <a href="<{$xoops_url}>/modules/mylinks/ratelink.php?cid=<{$link.cid}>&amp;lid=<{$link.id}>"><{$lang_ratethissite}></a><br />
+      <a href="<{$xoops_url}>/modules/mylinks/modlink.php?lid=<{$link.id}>"><{$lang_modify}></a><br />
+      <a href="<{$xoops_url}>/modules/mylinks/brokenlink.php?lid=<{$link.id}>"><{$lang_reportbroken}></a><br />
+      <a target="_top" href="<{$link.mail_body|xoops_tellafriend:$link.mail_subject}>"><{$lang_tellafriend}></a><br />
+      <a href="<{$xoops_url}>/modules/mylinks/singlelink.php?cid=<{$link.cid}>&amp;lid=<{$link.id}>"><{$lang_comments}> (<{$link.comments}>)</a>
+    </td>
+    <td align='left' class="item">
+      <h5><br /><img src='<{$xoops_url}>/modules/mylinks/images/counter.gif' border='0' align='absmiddle' alt='<{$down.lang_dltimes}>' />&nbsp;<{$lang_hits}><{$link.hits}><br />
+      <img src='<{$xoops_url}>/modules/mylinks/images/rate_new.png' border='0' align='absmiddle' alt='<{$down.lang_dltimes}>' />&nbsp;<{$lang_rating}><{$link.rating}>&nbsp;(<{$link.votes}>)</h5>
+    </td>
+ </tr>
+  
+</table>
+<br />
+

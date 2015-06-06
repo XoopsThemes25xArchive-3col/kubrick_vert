@@ -1,0 +1,141 @@
+<tr>
+  <{strip}>
+
+<{* IMAGE PART *}>
+  <td width='150' align='center'>
+    <br />
+    <div align='center'>
+      <{if $photo.is_normal_image }>
+
+<{* NORMAL IMAGES *}>
+
+<a class='thickbox' rel='vastecoucher' href='<{$photo.ahref_photo}>' title='<a href="<{$mod_url}>/photo.php?lid=<{$photo.lid}>">Infos et commentaires</a> >>> <{$photo.title}>'><img src='<{$photo.imgsrc_thumb}>' <{$photo.width_spec}> alt='<{$photo.title}>' title='<{$photo.title}>' /></a>
+
+<{else}>
+
+<{* FILES OTHER THAN IMAGES *}>
+
+<a class='thickbox' rel='vastecoucher' href='<{$photo.ahref_photo}>'title='<a href="<{$mod_url}>/photo.php?lid=<{$photo.lid}>">Infos et commentaires</a> >>> <{$photo.title}>'><img src='<{$photo.imgsrc_thumb}>' <{$photo.width_spec}> alt='<{$photo.title}>' title='<{$photo.title}>' /></a>
+
+      <{/if}>
+    </div>
+
+    
+
+    
+  </td>
+
+  <{* INFORMATION PART *}>
+  <td align='left' valign='middle'>
+
+   <{* 1ST LINE OF INFORMATION *}>
+
+    <br />
+   
+<table> 
+
+<tr>
+<td>
+   <{* 2ND LINE OF INFORMATION *}>
+
+<table class='outer' cellspacing='1'>
+        <tr>
+          <td class='head'>
+              <{* SUBMITTER *}>
+              <{if $photo.submitter > 0}>
+                <a href='<{$xoops_url}>/userinfo.php?uid=<{$photo.submitter}>'><img src='<{$mod_url}>/images/submitter.gif' width='16' height='16' alt='<{$lang_submitter}>' title='<{$lang_submitter}>' border='0' /></a>&nbsp; &nbsp;
+                  <{$photo.submitter_name}>&nbsp; &nbsp;
+                <a href='<{$mod_url}>/viewcat.php?uid=<{$photo.submitter}>'><img src='<{$mod_url}>/images/myphotos.png' width='16' height='16' alt='<{$photo.info_morephotos}>' title='<{$photo.info_morephotos}>' border='0' /></a>
+              <{else}>
+                  <img src='<{$mod_url}>/images/submitter.gif' width='16' height='16' alt='<{$lang_submitter}>' title='<{$lang_submitter}>' />
+                  <{$photo.submitter_name}>
+              <{/if}> 
+          </td>
+
+          <td class='even'>
+            <{* CATEGORY *}>
+              <{if $photo.cat_title}>
+                  <a href='<{$mod_url}>/viewcat.php?cid=<{$photo.cid}>'><{$photo.cat_title}></a>&nbsp; &nbsp;
+              <{/if}>
+            <{* LAST UPDATED *}>
+            <img src='<{$mod_url}>/images/clock.png' width='16' height='16' alt='<{$lang_lastupdatec}>' title='<{$photo.datetime}>' />&nbsp;
+            <{* HIT COUNTS *}>
+            <img src='<{$mod_url}>/images/hits.gif' width='16' height='16' alt='<{$lang_hitsc}>' title='<{$lang_hitsc}>' /><{$photo.hits}>&nbsp;
+            <{* COMMENT COUNTS *}>
+            <img src='<{$mod_url}>/images/comments.gif' width='16' height='16' alt='<{$lang_commentsc}>' title='<{$lang_commentsc}>' /><{$photo.comments}>&nbsp;
+            <{* VOTE BUTTON *}>
+            <{if $canratevote}>
+              <a href='<{$mod_url}>/ratephoto.php?lid=<{$photo.lid}>'><img src='<{$mod_url}>/images/vote.png' alt='<{$lang_ratethisphoto}>' title='<{$lang_ratethisphoto}>' border='0' /></a>
+            <{/if}>
+          </td>
+
+          <td class='odd'>
+            <{* TELL A FRIEND *}>
+            <{if $cantellafriend}>
+                <a href='<{$xoops_url}>/modules/tellafriend/index.php?target_uri=<{$mod_url|escape:"url"}>/photo.php%3Flid%3D<{$photo.lid}>&amp;subject=<{$lang_subject4taf|escape:"url"}>'><img src='<{$mod_url}>/images/tellafriend.png' width='16' height='16' alt='<{$lang_tellafriend}>' title='<{$lang_tellafriend}>' />&nbsp;<{$lang_tellafriend}></a>
+            <{/if}>
+          </td>
+        </tr>
+        
+</table>
+
+</td>
+</tr>
+
+
+<tr>   
+<td>
+    <{* EDIT ICON *}>
+    <{if $photo.can_edit}>
+      <a href='<{$mod_url}>/editphoto.php?lid=<{$photo.lid}>'><img src='<{$mod_url}>/images/editicon.gif' border='0' alt='<{$lang_editthisphoto}>' title='<{$lang_editthisphoto}>' /></a>
+    <{/if}>
+
+    <{* PHOTO'S SUBJECT *}>
+    <span class="itemText"><a name='<{$photo.lid}>'></a><a href='<{$mod_url}>/photo.php?lid=<{$photo.lid}>&amp;cid=<{$photo.cid}>'><{$photo.title}></a></span>&nbsp; &nbsp;
+            
+            <{* RANK & RATING *}>
+            <{if $canrateview}>
+              <{if $photo.rating > 0}>
+                <img src='<{$mod_url}>/images/rank<{$photo.rank}>.png' alt='<{$photo.rating}>' title='<{$photo.rating}>' border='0' />
+              <{else}>
+                <img src='<{$mod_url}>/images/rank_none.png' alt='<{$photo.info_votes}>' title='<{$photo.info_votes}>' border='0' />
+              <{/if}>
+            <{/if}>
+
+
+    <{* NEW ICON *}>
+    <{if $photo.is_newphoto}>
+      &nbsp; &nbsp;<img src='<{$mod_url}>/images/newred.gif' border='0' alt='<{$lang_new}>' title='<{$lang_new}>' />
+    <{/if}>
+
+    <{* UPDATE ICON *}>
+    <{if $photo.is_updatedphoto}>
+      &nbsp; &nbsp;<img src='<{$mod_url}>/images/update.gif' border='0' alt='<{$lang_updated}>' title='<{$lang_updated}>' />
+    <{/if}>
+
+    <{* POPULAR ICON *}>
+    <{if $photo.is_popularphoto}>
+      &nbsp; &nbsp;<img src='<{$mod_url}>/images/pop.gif' border='0' alt='<{$lang_popular}>' title='<{$lang_popular}>' />
+    <{/if}>
+    <br />
+    
+    <{* DESCRIPTION *}>
+
+    <{if $photo.description}>
+      <table>
+        <tr>
+          <td class="item">
+            <{$photo.description}>
+          </td>
+        </tr>
+      </table>
+    <{/if}>
+
+</td>
+
+</table>
+
+
+  </td>
+  <{/strip}>
+</tr>

@@ -1,0 +1,27 @@
+<table cellspacing="1" class="outer">
+
+<tr>
+    <th>
+        <{$smarty.const._AM_NEWS_WHOS_WHO}>
+    </th>
+</tr>
+
+<tr>
+    <td class="head" align="center"">
+      <{$smarty.const._NW_NEWS_LIST_OF_AUTHORS}>
+    </td>
+</tr>
+
+<{foreach item=who from=$whoswho}>
+<tr class="even">
+    <td>
+      <a href="<{$xoops_url}>/modules/news/newsbythisauthor.php?uid=<{$who.uid}>"><{$who.name}></a>   
+    </td>
+</tr>
+<{/foreach}>
+
+</table>
+
+
+
+

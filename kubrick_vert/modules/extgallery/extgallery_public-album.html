@@ -1,0 +1,81 @@
+<{$xoTheme->addStylesheet('modules/extgallery/extgallery.css')}>
+<div id="extgallery"> 
+	<table id="thumbTable" class="outer">
+		<tr>
+			<th colspan="<{$nbColumn}>"><{$cat.cat_name}></th>
+		</tr>
+        <tr>
+        	<td colspan="<{$nbColumn}>" class="pageNav"><{$pageNav}></td>
+        </tr>
+		<tr class="even">
+		<{section name=photo loop=$photos}>
+		<{if $smarty.section.photo.index % $nbColumn == 0 && !$smarty.section.photo.first}>
+		</tr>
+		<tr class="even">
+		<{/if}>
+			<td>
+			<{if $photos[photo].photo_id}>
+
+				<!-- Start Admin link -->
+				<{if $xoops_isadmin}>
+				<div class="adminLink">
+					<a href="public-modify.php?op=edit&id=<{$photos[photo].photo_id}>"><img src="images/edit.gif" /></a>&nbsp;
+					<a href="public-modify.php?op=delete&id=<{$photos[photo].photo_id}>"><img src="images/delete.gif" /></a>
+				</div>
+				<{/if}>
+				<!-- End Admin link -->
+
+                <!-- Start Rating score -->
+				<{if $enableRating}>
+				<div><img src="images/rating_<{$photos[photo].photo_rating}>.png" alt="Score rating : <{$photos[photo].photo_rating}>" title="Rating Score" /></div>		
+				<{/if}>
+				<!-- End Rating score -->
+                
+                <!-- Lightbox -->
+                <a href="<{$xoops_url}>/uploads/extgallery/public-photo/medium/<{$photos[photo].photo_name}>" rel="lightbox[<{$cat.cat_name}>]" title="<{$photos[photo].photo_desc}><br /><a href='public-photo.php?photoId=<{$photos[photo].photo_id}>'>Plus d'infos et commentaires</a>">
+
+<img class="thumb" src="<{$xoops_url}>/uploads/extgallery/public-photo/thumb/thumb_<{$photos[photo].photo_name}>" alt="<{$photos[photo].photo_desc}>" title="<{$photos[photo].photo_desc}>" /></a>
+				<!-- End Lightbox -->                
+
+				<!-- Photo Title -->
+				<!-- Si l'option d'affichage du titre de la photo est activée, alors -->
+				<{if $disp_ph_title == 1 }>
+					<div><b><{$photos[photo].photo_title}></b></div>
+				<{/if}>
+
+				<!-- Start Submitter link -->
+				<!-- <div><a href="<{$xoops_url}>/userinfo.php?uid=<{$photos[photo].user.uid}>"><{$photos[photo].user.uname}></a></div> -->
+				<!-- End Submitter link -->
+
+				<!-- Start Hit and comment counts -->
+				<div><b><{$photos[photo].photo_hits}></b> <{$lang.hits}> / <{$photos[photo].photo_comment}></b> <{$lang.comments}></div>
+				<!-- End Hit count -->
+                
+				<!-- Start Displaying Hook code -->
+				<{if $xoops_isadmin}>
+					<div><input type="text" value='[gallery title="<{$photos[photo].photo_desc}>"]<{$photos[photo].photo_id}>[/gallery]' /></div>
+				<{/if}>
+				<!-- End Displaying Hook code -->
+			<{/if}>
+			</td>
+		<{/section}>
+		</tr>
+        <tr>
+        	<td colspan="<{$nbColumn}>" class="pageNav"><{$pageNav}></td>
+        </tr>
+	</table>
+    
+    <!-- Start eXtGallery Breadcrumbs -->
+<table class="outer">
+	<tr colspan="2">
+    	<th>Catégories parentes</th>
+	</tr>
+	<tr>
+    	<td class="ext_breadcrumbs"><a href="<{xoAppUrl modules/extgallery/}>"><{$extgalleryName}></a><{foreachq item=node from=$catPath name=breadcrumb}> <img src="images/breadcrumb-link.gif" alt="BreadCrumb" /> <a href="public-categories.php?id=<{$node.cat_id}>"><{$node.cat_name}></a><{/foreach}> <img src="images/breadcrumb-link.gif" alt="BreadCrumb" /> <{$cat.cat_name}>
+</td>
+</tr>
+</table>
+<!-- Start eXtGallery Breadcrumbs -->
+
+   	<{include file='db:system_notification_select.html'}>
+</div>

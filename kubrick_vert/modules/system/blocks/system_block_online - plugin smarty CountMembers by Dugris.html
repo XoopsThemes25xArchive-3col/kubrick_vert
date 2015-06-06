@@ -1,0 +1,23 @@
+<table cellspading="5">
+<tr>
+<td class="odd">
+<{$block.online_total}>
+</td>
+<tr>
+<td class="odd">
+<{$block.lang_members}>: <{$block.online_members}><br />
+<{$block.lang_guests}>: <{$block.online_guests}>
+</td>
+</tr>
+<tr>
+<td class="odd">
+<{$block.online_names}> 
+<a href="javascript:openWithSelfMain('<{xoAppUrl /misc.php}>?action=showpopups&amp;type=online','Online',460,350);" title="<{$block.lang_more}>"><{$block.lang_more}></a>
+</td>
+</tr>
+<tr>
+<td class="odd">
+Nombre d'inscrits : <{CountMembers}>
+</td>
+</tr>
+</table>

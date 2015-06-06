@@ -1,0 +1,40 @@
+<table class="footertable" border="0" align="center">
+  <tr>
+  	<td height="30">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="210" align="right">
+    <a href="http://labs.xoofoo.org/modules/wiwimod/" title="Laboratoire Mor.pho.GEN.e.sis"><img src="<{xoImgUrl img/bt_xoofoo.png}>" alt="Laboratoire Mor.pho.GEN.e.sis" title="Laboratoire Mor.pho.GEN.e.sis" width="94" height="21" border="0" /></a>&nbsp;
+    <a href="http://frxoops.org" title="Xoops, Support Francophone"><img src="<{xoImgUrl img/bt_frxoops.png}>" alt="Xoops, Support Francophone" title="Xoops, Support Francophone" width="94" height="21" border="0" /></a>
+    
+    </td>
+    <td class="copyright" align="center">
+    
+        <{if !$xoops_isuser}>
+		<a href="<{xoAppUrl modules/news/}>" accesskey=""  title="<{$smarty.const.THEME_MODULE1_DESC}>"><{$smarty.const.THEME_MODULE1}></a>|
+		<a href="<{xoAppUrl modules/myalbum/}>" accesskey=""  title="<{$smarty.const.THEME_MODULE2_DESC}>"><{$smarty.const.THEME_MODULE2}></a>|
+		<a href="<{xoAppUrl modules/mylinks/}>" accesskey="" title="<{$smarty.const.THEME_MODULE4_DESC}>"><{$smarty.const.THEME_MODULE4}></a>|
+		<a href="<{xoAppUrl modules/mydownloads/}>" accesskey="" title="<{$smarty.const.THEME_MODULE5_DESC}>"><{$smarty.const.THEME_MODULE5}></a>|
+        <a href="<{xoAppUrl modules/sitemap/}>" accesskey="" title="<{$smarty.const.THEME_SITEMAP_DESC}>"><{$smarty.const.THEME_SITEMAP}></a>|
+		
+        <{else}>
+		<!-- menu en mode enregistré -->
+		<a href="<{xoAppUrl modules/news/}>" accesskey=""  title="<{$smarty.const.THEME_MODULE1_DESC}>"><{$smarty.const.THEME_MODULE1}></a>|
+		<a href="<{xoAppUrl modules/myalbum/}>" accesskey=""  title="<{$smarty.const.THEME_MODULE2_DESC}>"><{$smarty.const.THEME_MODULE2}></a>|
+		<a href="<{xoAppUrl modules/x_movie/}>" accesskey="" title="<{$smarty.const.THEME_MODULE3_DESC}>"><{$smarty.const.THEME_MODULE3}></a>|
+		<a href="<{xoAppUrl modules/mylinks/}>" accesskey="" title="<{$smarty.const.THEME_MODULE4_DESC}>"><{$smarty.const.THEME_MODULE4}></a>|
+		<a href="<{xoAppUrl modules/mydownloads/}>" accesskey="" title="<{$smarty.const.THEME_MODULE5_DESC}>"><{$smarty.const.THEME_MODULE5}></a>|
+        <a href="<{xoAppUrl modules/sitemap/}>" accesskey="" title="<{$smarty.const.THEME_SITEMAP_DESC}>"><{$smarty.const.THEME_SITEMAP}></a>|
+    	<{/if}>
+        
+        <a href="<{xoAppUrl modules/myCredits/}>" accesskey="" title="<{$smarty.const.THEME_MODULE6_DESC}>"><{$smarty.const.THEME_MODULE6}></a>|
+        <a href="<{xoAppUrl modules/liaise/}>" accesskey="c" title="<{$smarty.const.THEME_CONTACT_DESC}>"><{$smarty.const.THEME_CONTACT}></a>
+    
+    </td>
+    <td width="110"><div align="right">
+    <a href="#" title="<{$smarty.const.THEME_UPTOP}>"><img src="<{xoImgUrl icons/action/uptop.png}>" alt="<{$smarty.const.THEME_UPTOP}>" width="16" height="16" border="0" /></a>&nbsp;&nbsp;
+    <a href="<{xoAppUrl backend.php}>" title="<{$smarty.const.THEME_RSS}>"><img src="<{xoImgUrl icons/action/feed.png}>" alt="<{$smarty.const._BOOKSHOP_RSS_FEED}>" width="16" height="16" border="0" /></a>
+    </div></td>
+  </tr>
+</table>
+

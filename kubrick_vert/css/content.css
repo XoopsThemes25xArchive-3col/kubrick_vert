@@ -1,0 +1,406 @@
+/* === Images === */
+img {
+border:0;
+}
+
+/* === Titles === */
+h1 {
+font-size:1.4em;
+}
+
+h2 {
+font-size:1.2em;
+border-bottom:#e8e8e8 1px solid;
+}
+
+h3 {
+font-size:1.1em;
+}
+
+h4 {
+font-size:1em;
+}
+
+h5 {
+font-size:.9em;
+}
+
+h6 {
+font-size:.8em;
+}
+
+h1,h2,h3,h4 {
+font-family:'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+font-weight:700;
+color:#333;
+}
+
+h5,h6,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a {
+color:#44AA37;
+}
+
+h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover,.itemTitle a:hover,.itemPoster a:hover,.itemBody a:hover {
+color:#54D143;
+text-decoration:underline;
+}
+
+/* === Hyperlinks === */
+a {
+background-color:inherit;
+color:#44AA37;
+}
+
+a:focus,a:hover,a:active {
+background-color:inherit;
+color:#54D143;
+text-decoration:underline;
+}
+
+a.printable,a.pdf,a.friend {
+width:19px;
+height:19px;
+background-repeat:no-repeat;
+background-position:left top;
+text-indent:-1000em;
+}
+
+a.printable {
+background-image:url(../icons/action/printable.png);
+}
+
+a.pdf {
+background-image:url(../icons/action/pdf.png);
+}
+
+a.friend {
+background-image:url(../icons/action/friend.png);
+}
+
+a[rel~=alternate] {
+float:right;
+}
+
+/* ===== Other attributes of contents ===== */
+hr {
+background-color:inherit;
+text-align:center;
+width:95%;
+border-style:dashed;
+border-width:1px;
+}
+
+acronym,abbr {
+font-size:.7em;
+letter-spacing:.07em;
+border-bottom:#e8e8e8 1px dashed;
+cursor:help;
+}
+
+acronym:hover,abbr:hover {
+border-bottom-color:#f90;
+}
+
+bdo {
+direction:ltr;
+}
+
+/* ===== Lists ===== */
+#xo-canvas-content ul {
+list-style:decimal inside;
+margin:2px;
+padding:2px;
+}
+
+#xo-canvas-content li {
+margin-left:2px;
+background-color:inherit;
+line-height:1.1em;
+list-style:circle inside;
+}
+
+/* ========================== Tables and cells ======================= */
+table {
+width:100%;
+border-collapse:collapse;
+}
+
+table td {
+vertical-align:top;
+border-width:0;
+}
+
+.outer {
+border:1px solid #E8E8E8;
+}
+
+.head {
+color:#fff;
+background-color:#54D143;
+font-weight:700;
+padding:5px;
+}
+
+.head a:hover {
+background-color:inherit;
+text-decoration:underline;
+color:#fff;
+}
+
+.foot,tfoot {
+background-color:#fcfcfc;
+font-weight:700;
+padding:5px;
+}
+
+th,thead {
+color:#fff;
+background:#44AA37;
+font-weight:700;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+vertical-align:middle;
+padding:2px;
+}
+
+.head a,th a {
+background-color:inherit;
+color:#fff;
+font-weight:700;
+}
+
+.even,.odd {
+background-color:#fcfcfc;
+padding:5px;
+}
+
+tr.even td,tr.odd td {
+background:#fcfcfc;
+padding:5px;
+}
+
+/* ===== Articles (content-type in example) ===== */
+.item {
+text-align:justify;
+padding:3px;
+}
+
+.itemHead {
+padding:3px;
+}
+
+.itemInfo {
+text-align:right;
+line-height:1.5em;
+padding:3px 0 5px 3px;
+}
+
+.itemTitle {
+border-bottom:1px solid #e8e8e8;
+color:#333;
+font-weight:700;
+font-family:'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+margin:0 0 .4em;
+}
+
+.itemPoster a {
+color:#44AA37;
+font-style:italic;
+}
+
+.itemBody {
+text-align:justify;
+}
+
+.itemBody img {
+border:1px solid #e8e8e8;
+background-color:#fcfcfc;
+margin:5px;
+padding:2px;
+}
+
+.itemBody a:hover img {
+border:1px solid #54D143;
+background-color:#fff;
+margin:5px;
+padding:2px;
+}
+
+.itemText {
+line-height:1.5em;
+text-align:justify;
+margin:.5em;
+}
+
+.itemText a:hover,.itemInfo a:hover,.itemFoot a:hover {
+color:#54D143;
+ont-weight:bold;
+text-decoration:underline;
+}
+
+.itemFoot {
+text-align:right;
+padding:20px 10px 15px 0;
+}
+
+.itemTitle a,.itemBody a,.itemText a,.itemInfo a,.itemFoot a {
+color:#44AA37;
+font-weight:700;
+}
+
+.itemPoster,.itemPostDate,.itemStats {
+font-style:italic;
+font-size:.9em;
+}
+
+/* ===== Forums (content-type in example) ===== */
+.comTitle {
+background-color:inherit;
+margin-bottom:2px;
+font-weight:700;
+}
+
+.comText {
+background-color:inherit;
+text-align:justify;
+padding:2px;
+}
+
+.comUserStat {
+background-color:#fff;
+color:#44AA37;
+font-weight:700;
+border:1px solid #ccc;
+margin:2px;
+padding:2px;
+}
+
+.comUserStatCaption {
+font-weight:400;
+}
+
+.comUserStatus {
+margin-left:2px;
+margin-top:10px;
+background-color:inherit;
+color:#44AA37;
+font-weight:700;
+}
+
+.comUserRankText {
+font-weight:700;
+}
+
+.comDate {
+font-weight:400;
+font-style:italic;
+}
+
+.comDateCaption {
+font-weight:700;
+font-style:normal;
+}
+
+.comUserRank,.comUserImg {
+margin:2px;
+}
+
+.comUserRankImg {
+border:0;
+}
+
+/*=========== Navigation pages ==============*/
+.pagneutral {
+background-image:url(../icons/action/pagneutral.gif);
+font-size:.9em;
+text-align:center;
+}
+
+.pagact {
+background-image:url(../icons/action/pagact.gif);
+font-size:.9em;
+text-align:center;
+}
+
+.paginact {
+background-image:url(../icons/action/paginact.gif);
+font-size:.9em;
+text-align:center;
+}
+
+/* ===== Core messages ===== */
+.highlight {
+background-color:#ff0;
+color:red;
+font-weight:700;
+}
+
+.errorMsg,.confirmMsg,.resultMsg,.successMsg {
+text-align:center;
+margin-bottom:1em;
+border:2px solid #ddd;
+padding:.8em;
+}
+
+.errorMsg {
+background-color:#FBE3E4;
+color:#D12F19;
+border-color:#FBC2C4;
+}
+
+.confirmMsg {
+background-color:#FFF6BF;
+color:#817134;
+border-color:#FFD324;
+}
+
+.resultMsg {
+background-color:#E6EFC2;
+color:#529214;
+border-color:#C6D880;
+}
+
+.errorMsg a {
+background-color:transparent;
+color:#D12F19;
+}
+
+.confirmMsg a {
+background-color:transparent;
+color:#817134;
+}
+
+.successMsg a {
+background-color:transparent;
+color:#529214;
+}
+
+/*================ Styles for Quotation ================*/
+blockquote {
+float:right;
+display:block;
+background-color:#fafafa;
+font-style:italic;
+border-color:#eee;
+border-style:solid;
+border-width:1px 1px 1px 5px;
+margin:.5em;
+padding:.5em;
+}
+
+.signature,.xoopsQuote {
+font-style:italic;
+}
+
+/*================== Style for Code =================*/
+.xoopsCode {
+border:1px solid #eee;
+background:#fcfcfc;
+display:block;
+max-height:400px;
+overflow:auto;
+padding:.5em;
+}
+
+/* === Notifications === */
+#system-select_notifications {
+clear:both;
+}

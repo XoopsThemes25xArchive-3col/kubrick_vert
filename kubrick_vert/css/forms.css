@@ -1,0 +1,134 @@
+/* === All forms === */
+form {
+background-color:transparent;
+}
+
+/* === Forms for Content zone === */
+#xo-content form {
+background-color:#transparent;
+color:#44AA37;
+margin:0;
+}
+
+/* === Decoration === */
+.xo-formfield {
+margin-bottom:.2em;
+background-color:transparent;
+}
+
+#xo-content .xo-formfield.required label:after {
+background-color:#fff;
+color:#44AA37;
+content:'*';
+}
+
+#xo-page fieldset {
+border:none!important;
+line-height:1.5em;
+margin:0 0 1em;
+padding:1em;
+}
+
+#xo-page fieldset a {
+background-color:inherit;
+color:#44AA37;
+font-weight:700;
+text-transform:uppercase;
+}
+
+#xo-page fieldset a:hover {
+text-decoration:underline;
+}
+
+#xo-page legend {
+font-weight:700;
+}
+
+#xo-page label {
+background-color:transparent;
+padding:0;
+}
+
+/* === Select forms === */
+select {
+background-color:eee;
+border:1px solid #e8e8e8;
+font-size:.9em;
+}
+
+select[name=timezone_offset] {
+background-color:#fff;
+color:#44AA37;
+border:1px solid #e8e8e8;
+}
+
+/* === Chexbox === */
+input[type=checkbox]:hover {
+outline:1px solid #44AA37;
+border:1px solid #fff;
+border-color:#44AA37;
+}
+
+input[type=checkbox],input[type=radio] {
+color:#333;
+border:none;
+background-image:none;
+background-color:transparent;
+margin:4px 4px 0 0;
+}
+
+/* === Text areas === */
+textarea {
+border:1px solid #e8e8e8!important;
+overflow:auto;
+color:#44AA37;
+}
+
+#xo-page textarea {
+border:1px solid #e8e8e8;
+background-color:#fafafa;
+overflow:auto;
+color:#44AA37;
+}
+
+#xo-page input[type=text] {
+border:1px solid #e8e8e8!important;
+background-color:#fafafa;
+overflow:auto;
+color:#44AA37;
+}
+
+textarea:hover,textarea:focus {
+border:1px solid #44AA37;
+background-color:#fff;
+color:#54D143;
+}
+
+#xo-page textarea:hover,#xo-page input[type=text]:hover {
+border:1px solid #44AA37!important;
+background-color:#fff;
+color:#54D143;
+}
+
+#xo-page textarea:focus,#xo-page input[type=text]:focus {
+outline:1px solid #44AA37;
+border:1px solid #fff!important;
+background-color:#fff;
+color:#54D143;
+}
+
+/* === Buttons (for each module including System) === */
+input[type=submit], input[type=reset], .formButton, input[type=button] {
+font-family:Verdana, sans-serif;
+font-weight:400;
+font-variant:small-caps;
+color:#FFF;
+background-color:#54D143;
+border:1px solid #e8e8e8;
+background-image:url(../img/bg-degrad-vert.gif);
+background-repeat:repeat-x;
+background-position:left top;
+font-size:.9em;
+margin:.2em;
+padding:.2em;
+}

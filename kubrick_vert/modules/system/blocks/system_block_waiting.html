@@ -1,0 +1,11 @@
+<table>
+<tr>
+<td class="odd">
+<ul>
+  <{foreach item=module from=$block.modules}>
+  <li><a href="<{$module.adminlink}>"><{$module.lang_linkname}></a>: <{$module.pendingnum}></li>
+  <{/foreach}>
+</ul>
+</td>
+</tr>
+</table>

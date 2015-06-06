@@ -1,0 +1,311 @@
+/* === Frames in content zone === */
+#fullSupport {
+margin-top:-1px;
+border:1px solid #e8e8e8;
+background:#fcfcfc;
+padding:10px;
+}
+
+/* === Userbar (header) === */
+#xo-userbar {
+float:right;
+background-color:inherit;
+padding-top:2px;
+padding-right:1em;
+color:#333;
+}
+
+#xo-userbar button {
+background-color:transparent;
+background-image:none;
+border:none;
+color:inherit;
+padding:0;
+}
+
+#xo-userbar input[type=text],#xo-userbar input[type=password] {
+width:80px;
+font-family:Arial, Helvetica, sans-serif;
+font-size:1em;
+color:#44AA37;
+background-color:#fcfcfc;
+border:1px solid #bbb;
+outline:none!important;
+margin:0 0 2px;
+padding:.1em;
+}
+
+#xo-userbar input[type=text]:hover,#xo-userbar input[type=password]:hover {
+font-size:1em;
+background-color:#fff;
+color:#54D143;
+border:1px solid #44AA37;
+outline:none!important;
+}
+
+#xo-userbar input[type=text]:focus,#xo-userbar input[type=password]:focus {
+outline:none!important;
+font-size:1em;
+border:1px solid #44AA37!important;
+background-color:#fff;
+color:#54D143;
+}
+
+#xo-userbar a {
+background-color:inherit;
+color:#44AA37;
+text-decoration:none;
+font-weight:700;
+}
+
+#xo-userbar a:hover {
+background-color:inherit;
+color:#54D143;
+}
+
+#xo-userbar form,#xo-language form,#xo-accessibilitybar form {
+display:inline;
+padding:0;
+}
+
+#xo-userbar button img,#xo-userbar img,#xo-language img,#xo-accessibilitybar img {
+width:22px;
+height:22px;
+}
+
+/* === Searchbar (header) === */
+#xo-searchbar {
+float:left;
+margin-top:0;
+margin-left:1em;
+}
+
+#xo-searchbar form {
+display:inline;
+border:none!important;
+padding:0;
+}
+
+#xo-searchbar input[type=text] {
+font-family:Arial, Helvetica, sans-serif;
+font-size:1em;
+color:#44AA37;
+background-image:none;
+background-color:#fcfcfc;
+border:1px solid #bbb;
+width:150px;
+padding:.1em;
+}
+
+#xo-searchbar input[type=text]:hover {
+background-color:#fff;
+color:#54D143;
+border:1px solid #44AA37;
+}
+
+#xo-searchbar input[type=text]:focus {
+border:1px solid #44AA37;
+background-color:#fff;
+color:#54D143;
+}
+
+/* === Flags (header) === */
+#xo-language {
+float:right;
+margin-top:5px;
+background-color:inherit;
+padding-right:1em;
+color:#44AA37;
+}
+
+/* === Zoom (header) === */
+#xo-accessibilitybar {
+float:right;
+padding-top:2px;
+padding-right:1em;
+}
+
+#xo-accessibilitybar a {
+text-decoration:none;
+border:none;
+}
+
+/* === Navigation (header) === */
+#xo-globalnav {
+min-height:20px;
+background-color:transparent;
+color:#44AA37;
+font-weight:700;
+text-align:center;
+margin:0 0 1em;
+padding:2px 0;
+}
+
+* html #xo-globalnav {
+height:20px;
+}
+
+#xo-globalnav ul {
+text-align:center;
+list-style-type:none;
+padding:3px;
+}
+
+#xo-globalnav li {
+display:inline;
+padding-left:.5em;
+padding-right:.5em;
+margin:0;
+}
+
+#xo-globalnav a:hover {
+background-color:inherit;
+color:#54D143;
+text-decoration:none;
+}
+
+#xo-globalnav .x2-label,.hide {
+display:none;
+}
+
+#xo-globalnav a,#xo-redirect .notreload a {
+background-color:inherit;
+color:#44AA37;
+font-weight:700;
+text-decoration:none;
+}
+
+/* === Breadcrumbs (top page) === */
+#xo-breadcrumb {
+color:#54D143;
+border:1px solid #e8e8e8;
+background:#fcfcfc;
+margin-bottom:20px;
+padding:5px;
+}
+
+#xo-breadcrumb a {
+background:#fcfcfc;
+margin-bottom:20px;
+color:#44AA37;
+font-weight:700;
+padding:5px;
+}
+
+#xo-breadcrumb img {
+background:#fcfcfc!important;
+font-weight:700;
+padding:0 5px;
+}
+
+/* === Some rules === */
+.floatleft {
+float:left;
+margin-top:1em;
+margin-right:1em;
+padding-left:4px;
+border:0;
+}
+
+.floatright {
+float:right;
+border:0;
+margin:0 0 10px 10px;
+padding:2px;
+}
+
+.left {
+text-align:left;
+}
+
+.right {
+text-align:right;
+}
+
+.center {
+text-align:center;
+}
+
+.justify {
+text-align:justify;
+}
+
+.width100 {
+width:100%;
+}
+
+.width98 {
+width:98%;
+}
+
+.width75 {
+width:75%;
+}
+
+.width50 {
+width:50%;
+}
+
+.width33 {
+width:33%;
+}
+
+.width25 {
+width:25%;
+}
+
+.clear {
+clear:both;
+}
+
+.block {
+display:block;
+}
+
+.strong {
+font-weight:700;
+}
+
+/* === TinyEditor backround textarea === */
+body.mceContentBody {
+background-color:#fff;
+background-image:none;
+color:#333;
+}
+
+/* === Template system/system_siteclosed.html === */
+#xo-siteclose input[type=submit],#xo-siteclose input[type=button],#xo-siteclose input[type=reset],#xo-siteclose button,#xo-siteclose input[type=submit]:hover,#xo-siteclose input[type=button]:hover,#xo-siteclose input[type=reset]:hover,#xo-siteclose formButton:hover,#xo-siteclose button:hover,#xo-siteclose input[type=submit]:focus,#xo-siteclose input[type=button]:focus,#xo-siteclose input[type=reset]:focus,#xo-siteclose button:focus {
+background:inherit!important;
+border:none!important;
+outline:none!important;
+}
+
+/* === Template system/system_redirect.html === */
+#xo-redirect {
+font-size: 1.2em;
+width:780px;
+font-weight:700;
+text-align:center;
+margin:50px auto;
+}
+
+#xo-redirect .notreload {
+height:20px;
+background-color:inherit;
+padding-top:5px;
+color:#44AA37;
+}
+
+#xo-redirect .message {
+font-weight:700;
+min-height:100px;
+background-color:inherit;
+color:#fff;
+text-align:center;
+border:none;
+padding:2em;
+}
+
+#xo-redirect .message img {
+padding:.5em;
+}

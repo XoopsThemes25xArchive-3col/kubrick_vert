@@ -1,0 +1,104 @@
+<table width="100%" align="center" id="fullSupport">
+    <tr>
+	
+    <{foreach from=$subcategories item=cat key=count}>
+    	<{if $cat.imgurl != ""}>
+        <td width="33%" class="center">
+     		<table class="center">
+        		<tr>
+            		<td>
+            			<br /><h4><a href="<{$mod_url}>/viewcat.php?cid=<{$cat.cid}>"><{$cat.title}></a>
+    					<br /><{$lang_total}>&nbsp;<{$cat.photo_total_sum}>&nbsp;(<{$cat.photo_small_sum}>)</h4> 
+                    </td>
+                 </tr>
+                 <tr>
+                    <td>
+						<a href="<{$mod_url}>/viewcat.php?cid=<{$cat.cid}>"><img src="<{$cat.imgurl}>" width="60" border="0" alt="" /></a>
+                    </td>
+                 </tr>
+                 
+                    	<{foreach from=$cat.subcategories item=subcat}>
+       					<{if $subcat.number_of_subcat}>
+                        <tr>
+                        	<td>
+         					<h5><a href="<{$mod_url}>/viewcat.php?cid=<{$subcat.cid}>"><{$subcat.title}>
+                			<img src='<{$mod_url}>/images/subcat.gif' width='15' height='15' /></a><br /></h5>
+        					</td>
+                        </tr>        					
+                            <{else}>
+                        <tr>
+                        	<td>
+          					<h5><a href="<{$mod_url}>/viewcat.php?cid=<{$subcat.cid}>"> <{$subcat.title}></a>&nbsp;(<{$subcat.photo_small_sum}>)<br /></h5>
+        					</td>
+                        </tr>
+                        <{/if}>
+      					<{/foreach}>
+                 
+             </table>
+          </td>
+          <{else}>
+          <td>
+        	 <table>
+            	<tr>
+                	<td>
+            			<br /><h4><a href="<{$mod_url}>/viewcat.php?cid=<{$cat.cid}>"><{$cat.title}></a>
+    					<br /><{$lang_total}>&nbsp;<{$cat.photo_total_sum}>&nbsp;(<{$cat.photo_small_sum}>)</h4> 
+                    </td>
+                 </tr>
+                 <tr>
+                    <td>
+            			<a href="<{$mod_url}>/viewcat.php?cid=<{$cat.cid}>"><img src="<{$mod_url}>/images/folder32.gif" width="32" height="32" border="0" alt="" /></a>
+                    </td>
+                 </tr>
+                 
+                        <{foreach from=$cat.subcategories item=subcat}>
+       					<{if $subcat.number_of_subcat}>
+                 <tr>
+                 	<td>
+         				<h5><a href="<{$mod_url}>/viewcat.php?cid=<{$subcat.cid}>"><{$subcat.title}>
+                		<img src='<{$mod_url}>/images/subcat.gif' width='15' height='15' /></a><br /></h5>
+        			</td>
+                </tr>        				
+                        <{else}>
+                 <tr>
+                 	<td>         				
+                        <h5><a href="<{$mod_url}>/viewcat.php?cid=<{$subcat.cid}>"><{$subcat.title}></a>&nbsp;(<{$subcat.photo_small_sum}>)<br /></h5>
+        			</td>
+                </tr>
+                        <{/if}>
+      					<{/foreach}>
+                 
+             </table>
+      <{/if}>
+    </td> 
+    
+    <{if ($count+1) is div by 3}>
+      </tr><tr>
+    <{/if}>
+ <{/foreach}>
+  </tr>
+   
+
+<tr class="center">
+<td colspan="3">
+     <br />
+      <form name='cid_select' action='<{$mod_url}>/viewcat.php' method='GET' style='margin:0px;text-align:center;'>
+        <select name='cid' onchange='submit();'>
+          <option value=''><{$lang_directcatsel}></option>
+          <{$category_options}>
+        </select>
+      </form>
+     <br />
+</td>
+</tr>
+</table>
+
+<table>
+  <tr>
+  <td>
+      <h5><{$photo_global_sum}></h5>
+  </td>
+  <td align="right"><{if $lang_add_photo}><a href="submit.php">&nbsp;<{$lang_add_photo}><img src="<{$mod_url}>/images/pictadd.gif" border="0" alt="<{$lang_add_photo}>" title="<{$lang_add_photo}>" /></a><{/if}>
+  </td>
+  </tr> 
+</table>

@@ -1,0 +1,63 @@
+<{strip}>
+
+<table width="100%" cellspacing="0">
+  <tr>
+    <td>
+      <{include file="db:myalbum_categories.html"}>
+  </td>
+  </tr>
+</table>
+
+<br />
+
+
+<table id="fullSupport">
+    <br />
+  <tr align="right">
+            <td align="left" valign="middle">
+              <h5><{$lang_latest_list}></h6>
+            </td>
+            <td>
+              <{if $photonavdisp }>
+              <h6><{$photonavinfo}></h6>
+              <{$photonav}>
+              <{/if}>
+            </td> 
+  </tr>
+</table>
+  
+<br />
+<table width='100%' cellspacing='0' cellpadding='10' border='0'> 
+  <{foreach from=$photos item=photo}>
+  <{include file="db:myalbum_photo_in_list.html"}>
+  <{/foreach}>
+</table>
+      
+      
+<{if $photonavdisp }>
+<table id="fullSupport">        
+        <br />
+        <br />
+  <tr align="right">
+     <td>
+       <h6><{$photonavinfo}></h6>
+       <{$photonav}>    
+     </td> 
+  </tr>
+</table> 
+<{/if}>        
+        
+
+<br />
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td>
+      <br />
+      <{include file='db:system_notification_select.html'}>
+      <br />
+
+    </td>
+  </tr>
+</table>
+<{/strip}>

@@ -1,0 +1,39 @@
+<br />
+<table width="95%" id="fullSupport">
+  
+  <tr>
+    <td class="foot" colspan='2'><{$lang_category}> <{$down.category}></td>
+  </tr>
+  
+  <tr height="25">
+    <td align='center' width='20%' class="head"><{if $down.version != ''}><{$lang_version}>&nbsp;<{$down.version}><{/if}><br /><{$down.updated}></td>
+    <td width='80%' class="head" align="center"><h1><a href='visit.php?cid=<{$down.cid}>&amp;lid=<{$down.id}>' target='_blank'><img src='<{$xoops_url}>/modules/mydownloads/images/download.png' border='0' alt='<{$lang_dlnow}>' />&nbsp;&nbsp;<{$down.title}></a>&nbsp;<{$down.adminlink}></h1></td>
+  </tr>
+  
+  <tr>
+    <td align="center"><br /><{if $down.logourl != ""}><a href="<{$xoops_url}>/modules/mydownloads/visit.php?cid=<{$down.cid}>&amp;lid=<{$down.id}>" target="_blank"><img src="<{$xoops_url}>/modules/mydownloads/images/shots/<{$down.logourl}>" width="<{$shotwidth}>" alt="" /></a><{/if}></td>
+    <td class="item"><br /><{$down.description}></td>
+  </tr>
+  
+  <tr>
+    <td align='center'>
+      <a href="<{$xoops_url}>/modules/mydownloads/ratefile.php?cid=<{$down.cid}>&amp;lid=<{$down.id}>"><{$lang_ratethissite}></a><br />
+      <a href="<{$xoops_url}>/modules/mydownloads/modfile.php?lid=<{$down.id}>"><{$lang_modify}></a><br />
+      <a href="<{$xoops_url}>/modules/mydownloads/brokenfile.php?lid=<{$down.id}>"><{$lang_reportbroken}></a><br />
+      <a target="_top" href="<{$down.mail_body|xoops_tellafriend:$down.mail_subject}>"><{$lang_tellafriend}></a><br />
+      <a href="<{$xoops_url}>/modules/mydownloads/singlefile.php?cid=<{$down.cid}>&amp;lid=<{$down.id}>"><{$lang_comments}> (<{$down.comments}>)</a>
+    </td>
+    
+    <td align='left' class="item">
+      <br />
+      <h5><{if $down.hits > 0}><img src='<{$xoops_url}>/modules/mydownloads/images/counter.gif' border='0' align='absmiddle' alt='<{$down.lang_dltimes}>' />&nbsp;<{$down.hits}>&nbsp;&nbsp;<{/if}>
+    	<{if $down.size != ''}><img src='<{$xoops_url}>/modules/mydownloads/images/size.gif' border='0' align='absmiddle' alt='<{$lang_size}>' />&nbsp;<{$down.size}>&nbsp;&nbsp;<{/if}>
+    	<{if $down.platform != ''}><img src='<{$xoops_url}>/modules/mydownloads/images/platform.png' border='0' align='absmiddle' alt='<{$lang_platform}>' />&nbsp;<{$down.platform}>&nbsp;&nbsp;<{/if}>
+      <img src='<{$xoops_url}>/modules/mydownloads/images/rate_new.png' border='0' align='absmiddle' alt='<{$down.lang_dltimes}>' />&nbsp;<{$lang_ratingc}> <{$down.rating}> (<{$down.votes}>)<br />
+    	<{if $down.homepage != ''}><img src='<{$xoops_url}>/modules/mydownloads/images/home.png' border='0' align='absmiddle' alt='<{$lang_homepage}>' />&nbsp;<a href="<{$down.homepage}>" target="_blank"><{$down.homepage}></a><{/if}></h5>   
+    </td>
+    
+  </tr>
+  
+</table>
+<br />

@@ -1,0 +1,24 @@
+<br />
+<table class="outer" cellspacing="1">
+  <tr>
+    <th colspan="6" align="center"><{$news.title}></th>
+  </tr>
+  <tr>
+    <td class="even">
+    <br />
+    • <{$lang_voteonce}><br />
+    • <{$lang_ratingscale}><br />
+    • <{$lang_beobjective}><br />
+    • <{$lang_donotvote}><br /><br />
+    </td>
+  </tr>
+  <tr>
+    <td class="odd" align="center"><br />
+    <form method="post" action="<{$xoops_url}>/modules/news/ratenews.php">
+		<input type="hidden" name="storyid" value="<{$news.storyid}>" />
+		<select name="rating"><option>--</option><option>10</option><option>9</option><option>8</option><option>7</option><option>6</option><option>5</option><option>4</option><option>3</option><option>2</option><option>1</option></select>&nbsp;&nbsp;
+    <input type="submit" name="submit" value="<{$lang_rateit}>" /> <input type='button' value="<{$lang_cancel}>" onclick="location='<{$xoops_url}>/modules/news/article.php?storyid=<{$news.storyid}>'" />
+    </form><br />
+    </td>
+  </tr>
+</table>

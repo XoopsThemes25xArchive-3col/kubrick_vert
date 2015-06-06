@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+	<{assign var=theme_name value=$xoTheme->folderName|cat:'/xotpl'}>
+	<{assign var=theme_plugin value=$xoTheme->folderName|cat:'/xoplugins'}>
+
+	<!-- Metas -->
+	<{includeq file="$theme_name/xometas.html"}>
+
+	<{$xoops_module_header}>
+
+<!-- Scripts -->
+<{includeq file="$theme_name/xoscripts.html"}>	
+
+</head>
+<body>
+<div id="xo-wrapper" align="center">
+	<div id="xo-redirect">
+		
+<table>
+	<tr>
+    	<td id="header-l"></td>
+        <td id="header-c">
+			       <table>
+                 <tr>
+                    <td class="message"><img src="<{xoImgUrl img/logo-xoops.png}>" alt="<{$lang_siteclosemsg}>"/><br /><{$lang_siteclosemsg}></td>
+                 </tr>
+             </table>
+        </td>
+        <td id="header-r"></td>
+    </tr>
+</table>
+        
+        <div id="footer-l">
+    	<div id="footer-r">
+		<div class="notreload">
+		<form method="post" action="<{xoAppUrl /user.php op=login}>">
+		<input name="uname" type="text" title="<{$smarty.const.THEME_DESC_PSEUDO}>" />&nbsp;&nbsp;<input name="pass" type="password" title="<{$smarty.const.THEME_DESC_PASSWORD}>"/>
+
+		<input type="hidden" name="xoops_redirect" value="<{$smarty.server.REQUEST_URI}>" />
+		
+		<{if $lang_siteclosemsg}>
+		<input type="hidden" name="xoops_login" value="1" />
+		<{/if}>
+        <input class="xo-formbuttons" type="submit" value="<{$smarty.const._LOGIN}>" title="<{$smarty.const._LOGIN}>"/>
+
+		</form>
+		</div>
+        
+        </div>
+        </div>
+
+	<{if $xoops_logdump != ''}><div><{$xoops_logdump}></div><{/if}>
+	</div>
+</div>
+
+</body>
+</html>

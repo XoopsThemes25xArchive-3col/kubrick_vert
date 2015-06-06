@@ -1,0 +1,13 @@
+<{foreach item=user from=$block.users}>
+        <table class="system-new_users">
+        	<tr class="new_users">
+            	<td>
+				<{if $user.avatar != ""}><img src="<{$user.avatar}>" alt="Avatar" class="avatar" /><{/if}>
+                </td>
+            	<td class="user">
+				<a href="<{$xoops_url}>/userinfo.php?uid=<{$user.id}>" title="<{$user.name}>"><{$user.name}></a><br />
+				<span class="dateRegistered">n° <{$user.rank}> (<{$user.posts}>)</span>
+                </td>
+            </tr>
+         </table>
+<{/foreach}>

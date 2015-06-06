@@ -1,0 +1,31 @@
+<div class="system-site_info">
+<{if $block.showgroups}>
+	<table cellspacing="0">
+    <{foreach item=group from=$block.groups}>
+			<tr>
+            	<td class="admins" colspan="2"><{$group.name}></td>
+            </tr>
+		<{foreach from=$group.users item=user}>
+        	<tr class="user">
+            	<td>
+                	<{if $user.avatar != ""}><img src="<{$user.avatar}>" alt="Avatar" class="avatar" /><{/if}>
+                </td>
+            	<td>
+					<a href="<{xoAppUrl /userinfo.php uid=$user.id}>" title="<{$user.name}>"><{$user.name}></a><br />
+					<{$user.msglink}>
+                </td>
+            </tr>
+        <{/foreach}>
+       <{/foreach}>
+   </table>
+   		
+<{/if}>
+
+
+<p class="recommend_us">
+	<img src="<{xoImgUrl img/xoops_sticker.png}>" alt="Xoops, what else ?" /><br />
+	<{$block.recommendlink}>
+</p>
+</div>
+
+

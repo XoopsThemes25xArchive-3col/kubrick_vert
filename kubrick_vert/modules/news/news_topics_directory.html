@@ -1,0 +1,20 @@
+<table colspan="2" cellspacing="1" class="outer">
+
+<tr>
+    <th colspan="2">
+        <{$smarty.const._AM_NEWS_TOPICS_DIRECTORY}>
+    </th>
+</tr>
+
+<{foreach item=topic from=$topics}>
+<tr colspan="2">
+    <td class="head" align="center">
+      <img src="<{$xoops_url}>/modules/news/images/topics/<{$topic.topic_imgurl}>" />
+    </td>
+    <td class="even">
+      <h2><{$topic.prefix}><a href="<{$xoops_url}>/modules/news/index.php?storytopic=<{$topic.id}>"><{$topic.title}></a></h2> (<{$topic.news_count}>)   
+    </td>
+</tr>
+<{/foreach}>
+
+</table>

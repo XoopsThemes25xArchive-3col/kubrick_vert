@@ -1,0 +1,51 @@
+<{strip}>
+
+<br />
+<table id="fullSupport" cellspacing="1">
+  
+  <tr>
+    <td align="center">
+    <br />
+      <img src="<{$photo.imgsrc_thumb}>" border="0" <{$photo.width_spec}> />
+      <h5><{$photo.title}></h5>
+    <br />
+    </td>
+  </tr>
+  
+  <tr>
+    <td class="even">
+    <br />
+    • <{$lang_voteonce}><br />
+    • <{$lang_ratingscale}><br />
+    • <{$lang_beobjective}><br />
+    • <{$lang_donotvote}><br /><br />
+    </td>
+  </tr>
+  <tr>
+    <td class="odd" align="center">
+      <br />
+        <form method="post" action="ratephoto.php?lid=<{$photo.lid}>">
+                <input type="hidden" name="lid" value="<{$photo.lid}>" />
+                <select name="rating">
+                  <option>--</option>
+                  <option>10</option>
+                  <option>9</option>
+                  <option>8</option>
+                  <option>7</option>
+                  <option>6</option>
+                  <option>5</option>
+                  <option>4</option>
+                  <option>3</option>
+                  <option>2</option>
+                  <option>1</option>
+                </select>&nbsp;&nbsp;
+                <input type="submit" name="submit" value="<{$lang_rateit}>" />&nbsp;
+                <input type=button value="<{$lang_cancel}>" onclick="history.back();" />
+          </form>
+      <br />
+    </td>
+  </tr>
+</table>
+
+
+<{/strip}>

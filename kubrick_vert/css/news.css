@@ -1,0 +1,121 @@
+/* === Ajout Hack Stop la pub === */
+.modPub {
+color:#333;
+font-weight:700;
+font-family:'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+margin:0 0 2.5em;
+}
+
+/* === style pour les images du bloc / scoop Top-Recent === */
+.imgblock-top img {
+border:1px solid #e8e8e8;
+text-align:justify;
+margin:5px;
+padding:2px;
+}
+
+.imgblock-top img a:hover,.borderblock-random img a:hover {
+border:1px solid #54D143;
+background-color:#fff;
+margin:5px;
+padding:2px;
+}
+
+/* === Styles pour le bloc Recent-Top News avec onglets (tabskin==6 //plain) === */
+
+#fullSupportnav {
+margin-top:-1px;
+border:1px solid #e8e8e8;
+background:#fcfcfc;
+text-align:center;
+padding:10px;
+}
+
+#tabNavigation {
+font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+border:none;
+margin:0;
+}
+
+ul#tabNavigation li {
+display:inline;
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+}
+
+ul#tabNavigation a,ul#tabNavigation a:link,ul#tabNavigation a:visited {
+background-color:#54D143!important;
+border-top:solid 1px #e8e8e8;
+border-right:solid 1px #e8e8e8;
+border-bottom:solid 1px #fcfcfc;
+border-left:solid 1px #e8e8e8;
+color:#fff!important;
+font-weight:700;
+float:none;
+text-decoration:none!important;
+margin:0 0 0 5px;
+padding:2px 6px 3px;
+}
+
+ul#tabNavigation a:hover,ul#tabNavigation a:focus {
+background-color:#44AA37!important;
+color:#FFF!important;
+text-decoration:none!important;
+}
+
+ul#tabNavigation a:active {
+background-color:#44AA37!important;
+color:#fff!important;
+text-decoration:none!important;
+padding:2px 6px 3px;
+}
+
+ul#tabNavigation li.selectedTab a,ul#tabNavigation li.selectedTab a:link,ul#tabNavigation li.selectedTab a:visited {
+background-color:#fcfcfc!important;
+color:#333!important;
+cursor:text;
+text-decoration:none!important;
+margin:0 0 0 5px;
+padding:2px 6px 3px;
+}
+
+ul#tabNavigation li.fixTabsIE {
+display:none;
+visibility:hidden;
+}
+
+/* === style pour le bloc Random === */
+.borderblock-random {
+margin-top:0;
+border:1px solid #e8e8e8;
+background:#fcfcfc;
+padding:10px;
+}
+
+.paddingblock-random {
+padding-bottom:10px;
+text-align:justify;
+display:block;
+}
+
+.borderblock-random img {
+border:1px solid #e8e8e8;
+margin:5px;
+padding:2px;
+}
+
+/* === style pour le bloc Topics / Nav page === */
+.block-select {
+text-align:center;
+}
+
+.block-select select {
+text-align:left;
+border:1px solid #e8e8e8;
+font-size:.9em;
+color:#44AA37;
+background-color:#fff;
+margin:0;
+padding:.2em;
+}

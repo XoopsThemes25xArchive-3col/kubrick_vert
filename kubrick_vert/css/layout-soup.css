@@ -1,0 +1,83 @@
+/* === General rules === */
+#xo-canvas-columns {
+width:100%;
+border-collapse:collapse;
+}
+
+#xo-canvas-leftcolumn,#xo-canvas-rightcolumn {
+width:170px !important;
+padding:10px 0;
+}
+
+#xo-page {
+min-height:400px;
+padding-top:10px;
+}
+
+* html #xo-page {
+height:400px;
+}
+
+#xo-canvas-leftcolumn,#xo-page,#xo-canvas-rightcolumn {
+vertical-align:top;
+}
+
+/* === Specific rules for column === */
+#xo-canvas.rightcolumn-layout #xo-page,#xo-canvas.threecolumns-layout #xo-page {
+border-right-width:0;
+}
+
+/* === Blocks in Center column === */
+#xo-page .xo-blockszone .xo-block {
+margin-bottom:10px;
+}
+
+#xo-page-topleftblocks,#xo-page-bottomleftblocks {
+float:left;
+width:49.5%;
+}
+
+#xo-page-toprightblocks,#xo-page-bottomrightblocks {
+float:right;
+width:49.5%;
+}
+
+#xo-page-topcenterblocks,#xo-page-bottomcenterblocks {
+clear:both;
+}
+
+#xo-page .xo-lcrpageblocks .xo-blockszone,#xo-page .xo-lcrpageblocks .xo-blockszone {
+float:left;
+clear:none;
+width:33%;
+}
+
+.xo-lcrpageblocks #xo-page-topleftblocks,.xo-lcrpageblocks #xo-page-topcenterblocks,.xo-lcrpageblocks #xo-page-bottomleftblocks,.xo-lcrpageblocks #xo-page-bottomcenterblocks {
+margin-right:.5%;
+}
+
+#xo-page .xo-blockszone .xo-blockcontent {
+min-height:50px;
+}
+
+* html #xo-page .xo-blockszone .xo-blockcontent {
+height:100px;
+}
+
+#xo-page .xo-blockszone > .xo-block {
+padding-left:4px;
+}
+
+#xo-page .xo-blockszone .xo-block:before {
+display:block;
+height:9px;
+margin-left:-4px;
+margin-right:-1px;
+}
+
+#xo-page .xo-blockszone .xo-block:after {
+display:block;
+height:7px;
+margin-left:-4px;
+margin-right:-1px;
+}

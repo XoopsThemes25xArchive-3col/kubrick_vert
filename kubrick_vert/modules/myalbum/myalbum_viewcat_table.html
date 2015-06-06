@@ -1,0 +1,128 @@
+<{strip}>
+<table width="100%" cellspacing="0" id="fullSupport">
+  <tr>
+    <td>
+      <table border='0' cellpadding='0' cellspacing='0' width='100%'>
+        <tr>
+          <td align='left'>
+            <h4><a href='index.php'><{$lang_album_main}></a>&nbsp;:&nbsp;<{$album_sub_title}></h4><{$lang_total}>&nbsp;<{$photo_total_sum}>
+          </td>
+        </tr>
+      </table>
+      <{if count( $subcategories ) > 0 }>
+
+        <{include file="db:myalbum_categories.html"}>
+      <{/if}>
+    </td>
+  </tr>
+</table>
+<br />
+
+<{if $photo_small_sum < 1 }>
+  <div align="center">
+    <{$lang_nomatch}>
+  </div>
+<{else}>
+  <table width="95%" cellspacing="0">
+    <tr>
+      <td align="left">
+        <{if $photo_small_sum > 1 }>
+          
+          
+          <div align="center">
+            
+<table>
+  <tr>
+    <td>
+      <table cellspacing="1" cellpadding="20" width="90%" id="fullSupport">      
+        <tr>
+          <td class="head" align="center">
+            <{$lang_cursortedby}>
+          </td>
+        </tr>
+        <tr class="even" colspan="2">
+          <td>
+            <table cellspacing="10">
+              <tr align="center">
+                <td width="25%">
+                  <a href="viewcat.php?cid=<{$category_id}>&orderby=titleA"><img src="images/up.gif" border="0" align="middle" alt="" /></a><br /><{$lang_title}><br /> <a href="viewcat.php?cid=<{$category_id}>&orderby=titleD"><img src="images/down.gif" border="0" align="middle" alt="" /></a>
+                </td>
+                <td width="25%">
+                  <a href="viewcat.php?cid=<{$category_id}>&orderby=dateA"><img src="images/up.gif" border="0" align="middle" alt="" /></a><br /><{$lang_date}><br /><a href="viewcat.php?cid=<{$category_id}>&orderby=dateD"><img src="images/down.gif" border="0" align="middle" alt="" /></a>
+                </td>
+                <td width="25%">
+                  <a href="viewcat.php?cid=<{$category_id}>&orderby=ratingA"><img src="images/up.gif" border="0" align="middle" alt="" /></a><br /><{$lang_rating}><br /><a href="viewcat.php?cid=<{$category_id}>&orderby=ratingD"><img src="images/down.gif" border="0" align="middle" alt="" /></a>
+                </td>
+                <td width="25%">
+                  <a href="viewcat.php?cid=<{$category_id}>&orderby=hitsA"><img src="images/up.gif" border="0" align="middle" alt="" /></a><br /><{$lang_popularity}><br /><a href="viewcat.php?cid=<{$category_id}>&orderby=hitsD"><img src="images/down.gif" border="0" align="middle" alt="" /></a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>	
+      </table>    
+    </td>
+  </tr>
+</table>
+         <br /> 
+       
+            <table id="fullSupport" width='95%'>
+              <tr>
+                <td align='left'>
+                  <h5><{$photonavinfo}></h5>
+                </td>
+                <td align='right'>
+                  <{$photonav}>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <br />
+
+        <{/if}>
+        <br />
+        <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+          <tr>
+            <{foreach from=$photos item=photo}>
+              <td align='center' style='margin:0px;padding:5px 0px;'>
+                <a href='<{$mod_url}>/photo.php?lid=<{$photo.lid}>'><img src='<{$photo.imgsrc_thumb}>' <{$photo.width_spec}> alt='<{$photo.title}>' title='<{$photo.title}>' border='0' /></a>
+              </td>
+              <{if $photo.count is div by $colsoftableview }>
+                </tr>
+                <tr>
+              <{/if}>
+            <{/foreach}>
+          </tr>
+        </table>
+
+        <{if $photo_small_sum > 1 }>
+          <br />
+          <br />
+          <div align="center">
+            <table id="fullSupport" width='95%'>
+              <tr>
+                <td align='left'>
+                  <h5><{$photonavinfo}></h5>
+                </td>
+                <td align='right'>
+                  <{$photonav}>
+                </td>
+              </tr>
+            </table>
+          </div>
+        <{/if}>
+
+      </td>
+    </tr>
+  </table>
+<{/if}>
+<br />
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td>
+      <br />
+      <{include file='db:system_notification_select.html'}>
+    </td>
+  </tr>
+</table>
+<{/strip}>

@@ -1,0 +1,18 @@
+<br />
+<table class="outer" cellspacing="1">
+  <tr>
+    <th colspan="6" align="center"><{$lang_reportbroken}></th>
+  </tr>
+  <tr>
+    <td class="even"><br />
+      <{$lang_thanksforhelp}><br /><{$lang_forsecurity}><br /><br />
+    </td>
+  </tr>
+  <tr>
+    <td class="odd" align="center">
+        <form action="brokenfile.php" method="post">
+          <input type="hidden" name="lid" value="<{$file_id}>" /><br /><input type="submit" name="submit" value="<{$lang_reportbroken}>" />&nbsp;<input type=button value="<{$lang_cancel}>" onclick="javascript:history.go(-1)" /><br /><br />
+        </form>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,56 @@
+<table colspan="2" cellspacing="1" class="outer">
+
+<tr align="center">
+    <th colspan="2">
+      <img src='<{$user_avatarurl}>' border='0' alt='' />
+    </th>
+    <td colspan="2" class="head"><br />
+        <{$lang_news_by_this_author}> :
+        <br /><br /><br />
+        <h1><{$author_name_with_link}></h1>
+    </th>
+</tr>
+</table>
+
+<{foreach item=topic from=$topics}><br />
+<table class="outer">	
+  <tr class="head">
+    <{if $news_rating}>
+      <th colspan='4'>
+      <{else}>
+      <th colspan='3'>
+    <{/if}>
+      <{$topic.topic_link}>
+      </th>
+  </tr>
+  
+	<tr class="left">
+    <td class="even"><{$lang_date}></td>
+    <td class="even"><{$lang_title}></td>
+    <td class="even"><{$lang_hits}></td>
+  
+    <{if $news_rating}>
+      <td class="even"><{$lang_rating}></td>
+    <{/if}>
+	</tr>
+	
+<{foreach item=article from=$topic.news}>
+	<tr class="left">
+		<td class="even"><{$article.published}></td>
+    	<td class="even"><{$article.article_link}></td>
+    	<td class="even"><{$article.hits}></td>
+    
+    <{if $news_rating}>
+      	<td class="even"><{$article.rating}></td>
+    <{/if}>
+	</tr>
+<{/foreach}>
+	
+  <tr class="left">
+		<td colspan='2' class="even"><{$topic.topic_count_articles}></td>
+		<td class="even"><{$topic.topic_count_reads}></td><{if $news_rating}><td>&nbsp;</td><{/if}>
+	</tr>
+	
+
+<{/foreach}>
+</table>

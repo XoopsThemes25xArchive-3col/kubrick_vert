@@ -1,0 +1,87 @@
+/* ===== Blocks in Center columns (= xo-paqe) === */
+#xo-page-topblocks th,#xo-page-bottomblocks th {
+color:#fff;
+background:#44AA37;
+}
+
+#xo-page-topleftblocks .xo-blockcontent,#xo-page-toprightblocks .xo-blockcontent,#xo-page-bottomleftblocks .xo-blockcontent,#xo-page-bottomrightblocks .xo-blockcontent {
+border:1px solid #e8e8e8;
+background:#fcfcfc;
+margin:10px .5em;
+}
+
+#xo-page .xo-blockszone .xo-blocktitle {
+background-color:inherit;
+color:#333;
+font-size:1.3em;
+font-family:"Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+font-weight:700;
+border-bottom:1px solid #e8e8e8;
+margin:0 0 .4em;
+}
+
+#xo-page .xo-blockszone .xo-blockcontent {
+color:#333;
+text-align:justify;
+padding:.5em;
+}
+
+#xo-page .xo-blockszone .xo-blockcontent a {
+color:#44AA37;
+font-weight:700;
+text-decoration:none;
+}
+
+#xo-page .xo-blockszone .xo-blockcontent a:hover {
+color:#54D143;
+text-decoration:underline;
+}
+
+/* ===== Blocks in left & right columns === */
+#xo-canvas-leftcolumn .xo-block,#xo-canvas-rightcolumn .xo-block {
+max-width : 170px; /* Ajout 29-01 */
+margin-bottom:2em!important;
+color:#333;
+}
+
+#xo-canvas-leftcolumn .xo-blocktitle,#xo-canvas-rightcolumn .xo-blocktitle {
+background-color:inherit;
+padding-bottom:.4em;
+color:#333;
+font-size:1.1em;
+font-family:"Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+font-weight:700;
+text-align:center;
+}
+
+#xo-canvas-leftcolumn .xo-blockcontent,#xo-canvas-rightcolumn .xo-blockcontent {
+border:1px solid #e8e8e8;
+background:#fcfcfc;
+padding:10px;
+}
+
+#xo-canvas-leftcolumn .xo-blockcontent a,#xo-canvas-rightcolumn .xo-blockcontent a {
+background-color:inherit;
+color:#44AA37;
+font-weight:700;
+text-decoration:none;
+}
+
+#xo-canvas-leftcolumn .xo-blockcontent a:hover,#xo-canvas-rightcolumn .xo-blockcontent a:hover {
+background-color:inherit;
+color:#54D143;
+text-decoration:underline;
+}
+
+#xo-canvas-leftcolumn img,#xo-canvas-rightcolumn img {
+border:1px solid #e8e8e8;
+margin:5px;
+padding:2px;
+}
+
+#xo-canvas-leftcolumn img:hover,#xo-canvas-rightcolumn img:hover {
+border:1px solid #54D143;
+background-color:#fff;
+margin:5px;
+padding:2px;
+}

@@ -1,0 +1,67 @@
+
+  <{if count($categories) gt 0}>
+
+<table id="fullSupport">
+  
+  <tr>
+  	<td valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+  <!-- Start category loop -->
+  <{foreach item=category from=$categories}>
+    <td align="right" valign="top">
+	
+      <{if $category.image != ""}>
+        <a href="<{$xoops_url}>/modules/mylinks/viewcat.php?cid=<{$category.id}>"><img src="<{$category.image}>" height="70" border="0" alt="" />
+        </a>
+    <{/if}>
+    </td>
+    
+    <td align="left" valign="top">
+        <h4><a href="<{$xoops_url}>/modules/mylinks/viewcat.php?cid=<{$category.id}>"><{$category.title}></a>&nbsp;(<{$category.totallink}>)</h4>
+        <br />
+          <h5><{$category.subcategories}></h5>
+        </td>
+
+    <{if $category.count is div by 3}>
+    </tr>
+    <tr>
+    <{/if}>
+<br />
+  <{/foreach}>
+  <!-- End category loop -->
+
+  </tr>
+  <tr>
+  	<td colspan="3" valign="top"><br /><h5>&nbsp;&nbsp;&nbsp;<{$lang_thereare}></h5><br /></td>
+  </tr>
+</table>
+
+
+<br /><br />
+<table id="fullSupport">
+  <tr>
+  	<td><h5><{$lang_latestlistings}></h5></td>
+  </tr>
+</table>
+
+<{/if}>
+
+<{if $links != ""}>
+
+
+<table width="100%" cellspacing="0" cellpadding="10" border="0">
+<tr>
+<td width="100%" align="center" valign="top">
+
+  <!-- Start new link loop -->
+  <{section name=i loop=$links}>
+    <{include file="db:mylinks_link.html" link=$links[i]}>
+  <{/section}>
+  <!-- End new link loop -->
+
+</td></tr>
+</table>
+
+<{/if}>
+<{include file='db:system_notification_select.html'}>

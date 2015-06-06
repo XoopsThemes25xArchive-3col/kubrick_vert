@@ -1,0 +1,27 @@
+<div id="xo-globalnav" class="x2-nl x2-navigation"><ul>
+		<li class="x2-label"><{$smarty.const.THEME_NAVTITLE}></li>
+		<li><a href="<{xoAppUrl}>" accesskey="a"  title="<{$smarty.const.THEME_HOME_DESC}>"><{$smarty.const.THEME_HOME}></a></li>
+        
+        <!-- menu en mode anonyme -->
+        <{if !$xoops_isuser}>
+		<li><a href="<{xoAppUrl modules/news/}>" accesskey=""  title="<{$smarty.const.THEME_MODULE1_DESC}>"><{$smarty.const.THEME_MODULE1}></a></li>
+		<li><a href="<{xoAppUrl modules/myalbum/}>" accesskey=""  title="<{$smarty.const.THEME_MODULE2_DESC}>"><{$smarty.const.THEME_MODULE2}></a></li>
+		<li><a href="<{xoAppUrl modules/mylinks/}>" accesskey="" title="<{$smarty.const.THEME_MODULE4_DESC}>"><{$smarty.const.THEME_MODULE4}></a></li>
+		<li><a href="<{xoAppUrl modules/mydownloads/}>" accesskey="" title="<{$smarty.const.THEME_MODULE5_DESC}>"><{$smarty.const.THEME_MODULE5}></a></li>
+		
+        <{else}>
+		<!-- menu en mode enregistré -->
+		<li><a href="<{xoAppUrl modules/news/}>" accesskey=""  title="<{$smarty.const.THEME_MODULE1_DESC}>"><{$smarty.const.THEME_MODULE1}></a></li>
+		<li><a href="<{xoAppUrl modules/myalbum/}>" accesskey=""  title="<{$smarty.const.THEME_MODULE2_DESC}>"><{$smarty.const.THEME_MODULE2}></a></li>
+		<li><a href="<{xoAppUrl modules/x_movie/}>" accesskey="" title="<{$smarty.const.THEME_MODULE3_DESC}>"><{$smarty.const.THEME_MODULE3}></a></li>
+		<li><a href="<{xoAppUrl modules/mylinks/}>" accesskey="" title="<{$smarty.const.THEME_MODULE4_DESC}>"><{$smarty.const.THEME_MODULE4}></a></li>
+		<li><a href="<{xoAppUrl modules/mydownloads/}>" accesskey="" title="<{$smarty.const.THEME_MODULE5_DESC}>"><{$smarty.const.THEME_MODULE5}></a></li>
+		
+		<{if $xoops_isadmin}>
+		<!-- lien supplémentaire si je suis administrateur -->
+		<li><a href="<{xoAppUrl modules/xoopsinfo/admin/}>" accesskey="" title="<{$smarty.const.THEME_MODULE7_DESC}>"><{$smarty.const.THEME_MODULE7}></a></li>
+		<li><a href="<{xoAppUrl modules/protector/admin/}>" accesskey="" title="<{$smarty.const.THEME_MODULE8_DESC}>"><{$smarty.const.THEME_MODULE8}></a></li>
+		<{/if}>
+		<{/if}>
+		<li><a href="<{xoAppUrl modules/liaise/}>" accesskey="c" title="<{$smarty.const.THEME_CONTACT_DESC}>"><{$smarty.const.THEME_CONTACT}></a></li>
+	</ul></div>

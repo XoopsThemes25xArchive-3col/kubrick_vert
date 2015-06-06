@@ -1,0 +1,25 @@
+<{if $displaynav == true}>
+  <div id="fullSupportnav" class="block-select">
+    <form name="form1" action="<{$xoops_url}>/modules/news/index.php" method="get">
+    <{$topic_select}> <select name="storynum"><{$storynum_options}></select> <input type="submit" value="<{$lang_go}>" class="formButton" /></form>
+  </div>
+<{/if}>
+<br />
+<{if $topic_description != ''}>
+	<div class="itemText"><{$topic_description}></div>
+<{/if}>
+<br />
+<{if $topic_rssfeed_link != ""}>
+<div align='right'><{$topic_rssfeed_link}></div>
+<{/if}>
+<div style="margin: 20px 10px 20px 0; text-align: right;"><{$pagenav}></div>
+<table width='100%' border='0'>
+<tr>
+	<{section name=i loop=$columns}>
+	<td width="<{$columnwidth}>%"><{foreach item=story from=$columns[i]}><{include file="db:news_item.html" story=$story}><{/foreach}></td>
+	<{/section}>
+</tr>
+</table>
+
+<div style="text-align: right; margin: 10px;"><{$pagenav}></div>
+<{include file='db:system_notification_select.html'}>

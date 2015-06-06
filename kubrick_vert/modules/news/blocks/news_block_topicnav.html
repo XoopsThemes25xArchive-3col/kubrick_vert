@@ -1,0 +1,10 @@
+<!-- <div id="fullSupport"> -->
+   <ul> 
+    <{foreach item=topic from=$block.topics}>
+    <li>
+    	<a class="menuMain" href="<{$xoops_url}>/modules/news/index.php?storytopic=<{$topic.id}>"><{$topic.title}> (<{$topic.news_count}>)</a>
+     </li>   
+	<{/foreach}>
+    </ul>
+<!-- </div> -->
+

@@ -1,0 +1,21 @@
+<div class="system-login">
+<form action="<{xoAppUrl /user.php}>" method="post">
+	<label>
+		<input name="uname" type="text" value="<{$smarty.const.THEME_PSEUDO}>" onfocus="this.value=(this.value=='<{$smarty.const.THEME_PSEUDO}>')? '' : this.value ;" title="<{$smarty.const.THEME_DESC_PSEUDO}>"/>
+	</label><br />
+	<label>
+	    <input name="pass" type="password" value="<{$smarty.const.THEME_PASSWORD}>" onfocus="this.value=(this.value=='<{$smarty.const.THEME_PASSWORD}>')? '' : this.value ;" title="<{$smarty.const.THEME_DESC_PASSWORD}>"/>
+	</label><br />
+    <input type="hidden" name="xoops_redirect" value="<{$smarty.server.REQUEST_URI}>" />
+    <input type="hidden" name="op" value="login" />
+    <input class="xo-formbuttons" type="submit" value="<{$block.lang_login}>" title="<{$block.lang_login}>"/>
+     <br /><br />
+	<{$block.sslloginlink}>
+</form>
+</div>
+<div>
+<h5><ul>
+<li><a href="<{xoAppUrl /user.php}>" title="<{$block.lang_lostpass}>"><{$block.lang_lostpass}></a></li>
+<li><a href="<{xoAppUrl /register.php}>" title="<{$block.lang_registernow}>"><{$block.lang_registernow}></a></li></ul></h5>
+</div>
+

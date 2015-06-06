@@ -1,0 +1,203 @@
+/* === imports === */
+@import url(blocks.css);
+@import url(blocks-system.css);
+@import url(content-data.css);
+@import url(content.css);
+@import url(forms.css);
+@import url(news.css);
+
+/* === Reset === */
+* {
+font-size:1em;
+font-family:sans-serif;
+text-decoration:none;
+margin:0;
+padding:0;
+}
+
+/* === Beginning of the applicable styles === */
+html,body {
+background:#e7e7e7;
+color:#333;
+font-size:.8em;
+font-family:"Lucida Grande", Verdana, Arial, Sans-Serif;
+margin:0;
+padding:0;
+}
+
+body.site_closed form {
+padding:1em 35%;
+}
+
+/* === body boxes === */
+#system,#news,#myalbum,#x_movie,#mylinks,#mydownloads,#myCredits,#liaise,#sitemap,#tellafriend {}
+#xo-wrapper {}
+#xo-bgstatic {}
+
+/* === Header box === */
+#xo-header .system,#xo-header .news,#xo-header .myalbum,#xo-header .x_movie,#xo-header .mylinks,#xo-header .mydownloads,#xo-header .mycredits,#xo-header .liaise,#xo-header .sitemap {
+font-size:1em;
+margin:0;
+padding:0;
+}
+
+/* === Header elements === */
+#header-l {
+background:url("../img/tetiere_left.png") no-repeat left;
+width:20px;
+height:194px;
+margin:0;
+padding:0;
+}
+
+#header-c {
+background:url("../img/tetiere_center.png") repeat center;
+height:194px;
+margin:0;
+padding:0;
+}
+
+#header-r {
+background:url("../img/tetiere_right.png") no-repeat right;
+width:19px;
+height:194px;
+margin:0;
+padding:0;
+}
+
+#xo-banner {
+width:100%;
+height:194px;
+}
+
+#xo-banner-ad {
+position:absolute;
+top:90px;
+right:60px;
+}
+
+#xo-banner-ad object,#xo-banner-ad img {
+display:block;
+}
+
+#xo-site-title {
+position:absolute;
+width:auto;
+top:90px;
+padding-left:150px;
+font-size:3.4em;
+font-weight:700;
+color:#fff;
+font-family:'Lucida Grande', Verdana, Arial, Sans-Serif;
+background-color:inherit;
+z-index:12;
+}
+
+#xo-site-title a {
+color:#fff;
+}
+
+a:hover#xo-site-title {
+background-color:inherit;
+color:#fff;
+}
+
+#xo-site-slogan {
+position:relative;
+padding-top:100px;
+padding-left:150px;
+font-size:2em;
+font-style:italic;
+color:#fff;
+z-index:11;
+}
+
+#xo-main-logo {
+position:absolute;
+width:auto;
+background:inherit;
+z-index:13;
+padding:50px 0 0 40px;
+}
+
+/* === Page box === */
+#xo-canvas {
+min-width:780px;
+margin:2px 20px;
+}
+
+#page-ml {
+background:#fff url("../img/ml.png") repeat-y left;
+margin:0;
+padding:0;
+}
+
+#page-mr {
+background:url("../img/mr.png") repeat-y right;
+margin:0;
+padding:0;
+}
+
+/* === Content zone === */
+#xo-canvas-content {
+background-color:#FFF;
+margin:0 17px!important;
+}
+
+#xo-page {
+color:#333;
+padding:20px;
+}
+
+#xo-content {
+padding:20px;
+}
+
+/* === Footer === */
+#footer-l {
+background:#eee url("../img/bl.png") no-repeat left;
+height:62px;
+margin:0;
+padding:0;
+}
+
+#footer-r {
+background:url("../img/br.png") no-repeat right;
+height:62px;
+margin:0;
+padding:0;
+}
+
+#footer-r p {
+text-align:center;
+margin:0;
+padding:20px 0 0;
+}
+
+.copyright {
+background-color:transparent;
+text-decoration:none;
+text-align:center;
+}
+
+.copyright a {
+margin-left:.3em!important;
+margin-right:.6em!important;
+}
+
+.footertable {
+width:98%!important;
+}
+
+/* === Debug mode === */
+#xo-logger-output {
+font-size:.8em;
+padding-top:20px;
+}
+
+/* === back to the top link === */
+#xo-top {
+height:30px;
+background-color:transparent;
+color:#44AA37;
+}
